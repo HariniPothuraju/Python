@@ -1,0 +1,78 @@
+#LIST
+'''enclosed in square bracks[]
+separeted by commas
+hetrogenous in nature->you can store multiple data type in list
+slower because it is changable
+you can make changes in a list->mutable in nature'''
+a=[1,2,3,4,5,6]
+print(a)
+print(type(a))
+b=[3.2,554.6,1,'hii']
+print(b)
+print(type(b))
+#INDEXING(accesing an element)
+print(a[2])
+print(b[0])
+print(b[-4])
+#SLICING(jumping)
+print(a[1:4])
+print(a[::2])#every second element
+#APPENDING(adding an element at the end)
+a.append(10)
+print(a)
+#EXTENDING(adding multiple ements at the end)
+a.extend(["hii",5.7,534])
+print(a)
+#INSERTION(add an item aat specific position)
+a.insert(9,90)
+print(a)
+#REMOVING
+a.remove("hii")
+print(a)
+#POPPING AT ITEM(removes and returns an item)
+c=a.pop(6)
+print(c)
+print(a)
+#REVERSING
+a.reverse()
+print(a)
+#SUM,MIN,MAX
+print(sum(a))
+print(min(a))
+print(max(a))
+#COPY
+d=a.copy()
+print(d)
+#CLEAR A LIST
+a.clear()
+print(a)
+print(d)
+#SORTING
+a.sort()
+print(a)
+
+
+OUTPUT:[1, 2, 3, 4, 5, 6]
+<class 'list'>
+[3.2, 554.6, 1, 'hii']
+<class 'list'>
+3
+3.2
+3.2
+[2, 3, 4]
+[1, 3, 5]
+[1, 2, 3, 4, 5, 6, 10]
+[1, 2, 3, 4, 5, 6, 10, 'hii', 5.7, 534]
+[1, 2, 3, 4, 5, 6, 10, 'hii', 5.7, 90, 534]
+[1, 2, 3, 4, 5, 6, 10, 5.7, 90, 534]
+10
+[1, 2, 3, 4, 5, 6, 5.7, 90, 534]
+[534, 90, 5.7, 6, 5, 4, 3, 2, 1]
+650.7
+1
+534
+[534, 90, 5.7, 6, 5, 4, 3, 2, 1]
+[]
+[534, 90, 5.7, 6, 5, 4, 3, 2, 1]
+[]
+Selection deleted
