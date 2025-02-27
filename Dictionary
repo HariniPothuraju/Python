@@ -1,0 +1,52 @@
+#DICTIONARY
+'''collection of key-values pairs
+each key maps to a vlue,a keys must be unique.
+{key:value}'''
+a={"name":"Raja","age":20,"city":"US"}
+print(type(a))
+print(a)
+b={"name":"Harini","age":19,"city":"US"}
+print(type(b))
+print(b)
+#accesing values
+print(a['age'])
+print(a.get("age"))
+print(b['age'])
+print(a.get("Age"))
+#ADDING/UPPDATING VALUES
+a["email"]="harinipothuraju611@gmail.com"
+print(a)
+#UPDATE
+a["name"]="Harini"
+print(a)
+#REMOVING ITEM
+del a["email"]
+print(a)
+b["name"]="Revanth"
+print(b)
+#GET ALL KEYS
+print(a.keys())
+#GET ALL VALUES
+print(a.values())
+#GET ALL KEY VALUE PAIRS
+print(a.items())
+#CLEAR
+a.clear()
+print(a)
+
+OUTPUT:<class 'dict'>
+{'name': 'Raja', 'age': 20, 'city': 'US'}
+<class 'dict'>
+{'name': 'Harini', 'age': 19, 'city': 'US'}
+20
+20
+19
+None
+{'name': 'Raja', 'age': 20, 'city': 'US', 'email': 'harinipothuraju611@gmail.com'}
+{'name': 'Harini', 'age': 20, 'city': 'US', 'email': 'harinipothuraju611@gmail.com'}
+{'name': 'Harini', 'age': 20, 'city': 'US'}
+{'name': 'Revanth', 'age': 19, 'city': 'US'}
+dict_keys(['name', 'age', 'city'])
+dict_values(['Harini', 20, 'US'])
+dict_items([('name', 'Harini'), ('age', 20), ('city', 'US')])
+{}
