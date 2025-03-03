@@ -1,0 +1,18 @@
+#Loop control statement
+'''break
+continue->skip the current iteration and move to the next one pass->
+'''
+# Break statement
+# Finding the first late student in class
+
+students = ["raja", "sai", "harini", "arun(late)", "arha"]
+for i in students:
+    if "late" in i:
+        print(f"{i} is late! Stopping attendance check.")
+        break
+    print(f"{i} is on time")
+output:
+raja is on time
+sai is on time
+harini is on time
+arun(late) is late! Stopping attendance check.
