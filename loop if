@@ -1,0 +1,14 @@
+age=int(input("enter your age: "))
+if age>18:
+    membership=input("do you have a membership(yes/no): ").lower()
+    if membership =="yes":
+        print("welcome to the club")
+    else:
+        print("you need a membership to enter")
+else:
+    print("you are a minor.you cant enter the club")
+        
+        output:
+enter your age:  19
+do you have a membership(yes/no):  yes
+welcome to the club
