@@ -1,0 +1,13 @@
+# Pass statement
+# Teacher planning some lessons but leaving some topics for later
+
+topics = ["intro", "syntax rules", "data type", "conditional statements (coming soon)"]
+for i in topics:
+    if "coming soon" in i:
+        pass
+    else:  
+        print(i)
+output:
+intro
+syntax rules
+data type
