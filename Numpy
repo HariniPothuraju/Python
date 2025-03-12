@@ -1,0 +1,126 @@
+'''Numpy offers powerful functions
+1. Universal functions -> operates element wise on array making calculations fast and efficent
+np.mod()   -> remainder
+np.log()   -> natural logarithm value
+np.bitwise_and()  -> bitwise AND operation
+np.hypot() -> hypotenuse of right triangle   (square root of (base^2 + height^2))
+
+2. Aggregate functions -> summarizing the entire data acroos the arrays
+np.sum() -> returns sum of arary elements
+np.min() -> returns minimum in arary
+np.max() -> returns maximum in arary
+np.mean() -> returns mean of arary   -> sum of all elements / total no. of elements
+np.median() -> returns median of arary  -> centre value  (even / odd)  -> odd = middle value / even = average of two middle values
+np.std() -> returns standard deviation of arary  -> square root of variance
+np.var() -> returns variance of arary  -> s^2 = 1/n summation of (x-mean)^2
+
+3. Logic functions -> these are useful for testing condition and truth values
+Testing truth value
+-> np.all -> returns true if all elements are true
+-> np.any -> returns true if any element is true
+
+Testing Array Type
+-> np.iscomplex -> returns true if elements are complex
+-> np.isreal -> returns true for real values
+
+Element wise logical operations
+-> np.logical_and -> logical AND
+-> np.logical_or -> logical OR
+-> np.logical_not -> logical NOT
+-> np.logical_xor -> logical XOR
+
+4. Element-wise comparison functions
+np.greater()
+np.less()
+np.greater_equal()
+np.less_equal()
+np.equal()
+np.not_equal()'''
+
+#mod()
+print(np.mod([1,2,3,4],3))
+
+#log()
+print(np.log([1,2,3,4]))   #natural logarithm
+
+#log2()
+print(np.log2([1,2,3,4]))  #logarithm with base 2
+
+#log10()
+print(np.log10([1,2,3,4])) #logarithm with base 10
+
+#bitwise_and()
+print(np.bitwise_and([1,2,3,4],[3,4,5,6]))
+
+#hypot()
+print(np.hypot(3,4))  #3 is base, 4 is height
+output:
+[1 2 0 1]
+[0.         0.69314718 1.09861229 1.38629436]
+[0.        1.        1.5849625 2.       ]
+[0.         0.30103    0.47712125 0.60205999]
+[1 0 1 4]
+5.0
+
+
+2)#aggregate
+
+import numpy as np
+arr = np.array([1,2,3,4,5])
+print(arr.sum())  #15
+print(arr.min())  #1
+print(arr.max())  #5
+print(arr.mean())  #3.0
+print(np.median(arr)) # 3.0
+print(arr.std())
+print(arr.var())
+output:
+15
+1
+5
+3.0
+3.0
+1.4142135623730951
+2.0
+
+
+3)arr = np.array([1,0,3,0])
+
+print(np.all(arr))  #false because all elemnets are not non zero
+print(np.any(arr))
+
+print(np.iscomplex([1+2j,3,4]))
+print(np.isreal([1+2j,3,4]))
+
+print(np.logical_and([True,False],[True,True]))  #t-t -> t otherwise false
+print(np.logical_or([True,False],[True,True]))  # f-f -> f otherwise true
+print(np.logical_not([True,False]))  # t-> f and f -> t
+print(np.logical_xor([True,False],[True,True]))  # t-f -> t, f-t -> t otherwise false
+output:
+False
+True
+[ True False False]
+[False  True  True]
+[ True False]
+[ True  True]
+[False  True]
+[False  True]
+
+
+
+4)a = np.array([1,2,3,4])
+b = np.array([5,6,7,8])
+
+print(np.greater(a,b))
+print(np.less(a,b))
+print(np.greater_equal(a,b))
+print(np.less_equal(a,b))
+print(np.equal(a,b))
+print(np.not_equal(a,b))
+output:
+[False False False False]
+[ True  True  True  True]
+[False False False False]
+[ True  True  True  True]
+[False False False False]
+[ True  True  True  True]
