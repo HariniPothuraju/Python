@@ -1,0 +1,50 @@
+#reshape() function -> used to change the shape of an array without changing its data
+
+# np.reshape(array,new_shape)
+
+arr = np.array([1,2,3,4,5,6,7,8,9])   #1D  with 9 elements
+
+re_arr = arr.reshape(3,3)
+print(re_arr)
+
+re_arr2 = arr.reshape(1,9)
+print(re_arr2)
+
+re_arr3 = arr.reshape(9,2)
+print(re_arr3)
+output:
+[[1 2 3]
+ [4 5 6]
+ [7 8 9]]
+[[1 2 3 4 5 6 7 8 9]]
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+<ipython-input-12-446b9526f03b> in <cell line: 0>()
+     11 print(re_arr2)
+     12 
+---> 13 re_arr3 = arr.reshape(9,2)
+     14 print(re_arr3)
+
+ValueError: cannot reshape array of size 9 into shape (9,2)
+
+
+2)arr = np.array([1,2,3,4,5,6,7,8,9,10])
+re = arr.reshape(5,2,1)
+print(re)
+output:
+[[[ 1]
+  [ 2]]
+
+ [[ 3]
+  [ 4]]
+
+ [[ 5]
+  [ 6]]
+
+ [[ 7]
+  [ 8]]
+
+ [[ 9]
+  [10]]]
+
+
